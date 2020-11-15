@@ -1,0 +1,20 @@
+body{
+    background-color: #001324;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 170px 120px 120px 800px;
+    grid-template-rows: 70px 170px 380px;
+    gap: 4px 4px;
+    grid-template-areas:
+      "Info Menu Menu Menu"
+      "Info Main Main Main"
+      "Info Main Main Main";
+  }
+  .Info { grid-area: Info; }
+  .Menu { grid-area: Menu; }
+  .Main { grid-area: Main; }
+    
+div > div{
+    background-color: #98D9CF;
+}
