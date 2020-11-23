@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="T1"></title>
+    <script>
+        document.getElementById("T1").innerHTML = "Pause from CV";
+    </script>
+        
+    <script>
+        }
+    </script>
+</head>
+<body style="background-color:#001324 ; color: #98D9CF;">
+    <h1 id="P1"></h1>
+    <script>
+        document.getElementById("P1").innerHTML = "What is your Zodiac elements?";
+    </script>
+    <form><b>
+        <label for="sign">What's your sign?</label>
+        <input type="text" id="sign" name="sign" style="margin-left: 3%; width: 10cm;"><br><br>
+    </form>
+    <button type="button" id="submit" style="margin-left: 12%;" onclick="ChangePic();getElementById('ZodiacPicture').src='WOW.png';">Click Me!</button><br><br></b>
+    <img id="ZodiacPicture" src="Zodiac.png" alt="Zodiac Picture" width="280" style="margin-left: 4%">
+    <h2 id="Elements" style="margin-left: 4%"></h2>
+    <script>
+       function ChangePic(){ // changing the pic to the element
+        var d = document.getElementById("sign").value;
+        if(d==="Leo"||d==="Aries"||d==="Sagittarius")
+           document.getElementById("Elements").innerHTML="Fire";
+        if(d==="Virgo"||d==="Capricorn"||d==="Taurus")
+            document.getElementById("Elements").innerHTML="Earth";
+        if(d==="Cancer"||d==="Scorpio"||d==="Pisces")
+            document.getElementById("Elements").innerHTML="Water";
+        if(d==="Gemini"||d==="Libra"||d==="Aquarius")
+            document.getElementById("Elements").innerHTML="Air";
+        }
+    </script>
+</body>
+</html>
