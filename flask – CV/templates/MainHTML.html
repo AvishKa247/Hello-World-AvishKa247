@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Resume of Avishai Katz, Information Systems Student at Ben Gurion University </title>
+        <!-- Link to the CSS file that will contain a page layout -->
+        <link href="{{ url_for('static', filename='MainCSS.css') }}" rel="stylesheet">
+         <!-- Link to the Java Script file that will contain fuctions -->
+         <script src="MainJS.js"></script>
+    </head>
+    <body id="MainPage">
+        <!-- Build a navigation menu --> 
+        <nav class="navbar-expand-lg bg-primary" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#MainPage">
+                <img class="img-profile rounded-circle" src="{{ url_for('static', filename='Avish.jpg') }}" height="200">
+            </a>
+            <div class="navbar-collapse" id="nav-sections">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item" id="do_it"><a class="nav-link js-scroll-trigger" href="#contactme">Contact Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Resume">Download Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="sections">
+            <!-- The main page that contains general information about me - color changes in the design and link to social networks -->
+            <section class="resume-section" id="about">
+                <div style="width: 100%">
+                    <h1>Avishai  <span style="color: #4296EB;">Katz</span></h1>
+                    <div style="margin-bottom: 2rem" class="subheading">
+                        Tel Aviv • Israel • 0523-211486 •
+                        <a href="mailto:AvishaiKatz24@email.com">AvishaiKatz24@email.com</a>
+                    </div>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem">Information systems management student, with the ability to analyze data and lead processes.<br>
+                        Rapid self-learning ability, independent and in a team work, high work ethic and service consciousness, excellent interpersonal skills.</p>
+                    <div>
+                    </div>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem">Recommendations are given <a href="{{ url_for('recommend') }}">here</a></p>
+                     <p style="font-size: 1.2rem; margin-bottom: 2rem">To Find my taste in Movies press <a href="{{ url_for('movies') }}">here</a></p>
+                    <div>
+                       <!-- I do not have social media accounts so I put David Beckham's accounts for this work-->
+                        <a class="Icons" href="https://www.instagram.com/davidbeckham/" target="_blank" style="background-image:url({{ url_for('static', filename='Instagram.jpg') }});"></a>
+                        <a class="Icons" href="https://he-il.facebook.com/Beckham/" target="_blank" style="background-image:url({{ url_for('static', filename='Facebook.jpg') }});"></a>
+                        <a class="Icons" href="https://twitter.com/davibeckham24x7/" target="_blank" style="background-image:url({{ url_for('static', filename='Twitter.jpg') }});"></a>
+                        <a class="Icons" href="https://uk.linkedin.com/in/david-beckham-10804541" target="_blank" style="background-image:url({{ url_for('static', filename='Linkdin.jpg') }});"></a>
+                    </div>
+                </div>
+            </section>
+            <!-- Page containing employment experience - using list -->
+            <section class="resume-section" id="experience">
+                <div style="width: 100%">
+                    <h2 style="margin-bottom: 2rem">Experience</h2>
+                    <div style="margin-bottom: 2rem" class="set-position">
+                        <div style="flex-grow: 1">
+                            <h3> Visa and Life Insurance Coordinator</h3>
+                            <div style="margin-bottom: 1rem" class="subheading">Ben-Gurion University</div>
+                            <p>
+                                <ul>
+                                    <li>Providing service in English to foreign students</li>
+                                    <li>Working with development team to upgrade the systems</li>
+                                    <li>Ability to deal with bureaucracy</li>
+                                    <li>Managing several projects simultaneously</li> 
+                                </ul>
+                            </p>
+                        </div>
+                        <div><span style="color: #4296EB;">April 2020 - Present</span></div>
+                    </div>
+                    <div style="margin-bottom: 2rem" class="set-position">
+                        <div style="flex-grow: 1">
+                            <h3>Shift Manager</h3>
+                            <div style="margin-bottom: 1rem" class="subheading">Nitzat Haduvdevan - Organic Store</div>
+                            <p>
+                                <ul>
+                                    <li>Staff management</li>
+                                    <li>Inventory, delivery system and checkouts management</li>
+                                    <li>Customer service to a demanding population</li>
+                                    <li>Ability to work under pressure</li> 
+                                    <li>Meeting sales targets</li> 
+                                </ul>
+                            </p>
+                        </div>
+                        <div><span style="color: #4296EB;">December 2014 - March 2017</span></div>
+                    </div>
+                </div>
+            </section>
+             <!-- Page containing education history --> 
+            <section class="resume-section" id="education">
+                <div style="width: 100%">
+                    <h2 style="margin-bottom: 2rem">Education</h2>
+                    <div style="margin-bottom: 2rem" class="set-position">
+                        <div style="flex-grow: 1">
+                            <h3>Ben-Gurion University</h3>
+                            <div style="margin-bottom: 1rem" class="subheading">Bachelor in Information Systems Management</div>
+                            <div>Courses such as: Programming, Systems Analysis and Design, Databases, <br> Infrastructure
+                                Information Technologies, Web-Bsed Computer Systems,<br> Information Systems Architecture
+                                In organization, Project Management,<br> Strategy and Business Entrepreneurship.</div>
+                        </div>
+                        <div><span style="color: #4296EB;">September 2018 - Today</span></div>
+                    </div>
+                    <div style="margin-bottom: 2rem" class="set-position">
+                        <div style="flex-grow: 1">
+                            <h3>The Hebrew Reali School in Haifa</h3>
+                            <div style="margin-bottom: 1rem" class="subheading">Medical Biology and Computers Majors</div>
+                            <p>Graduated with Honors</p>
+                        </div>
+                        <div><span style="color: #4296EB;">September 2008 - July 2011</span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Page containing my skills with an img for the languages & tools -->
+            <section class="resume-section" id="skills">
+                <div style="width: 100%">
+                    <h2 style="margin-bottom: 2rem">Skills</h2>
+                    <div style="margin-bottom: 1rem"><h3> Languages & Tools</h3></div>
+                    <img src="{{ url_for('static', filename='Icons.png') }}" alt="Icons" width="600"><br><br><br>
+                    <div style="margin-bottom: 1rem"><h3>School Projects</h3></div>
+                    <ul>
+                        <li>
+                            Development of a scheduling system in the Studio Visual environment.
+                        </li>
+                        <li>
+                            Design, planning, implementation and assimilation of BI systems for business analysis and decision support.
+                        </li>
+                        <li>
+                            Establishing a web application using design and development tools for setting up applications in the Internet environment.
+                        </li>
+                        <li>
+                            Customer Relationship Management - Salesforce customization.
+                        </li>
+                        <li>
+                            Final project as a development of an order system in Priority system for a large company.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Page containing contact form -->
+            <section class="resume-section" id="contactme">
+                <div style="width: 100%">
+                    <h2 style="margin-bottom: 2rem">Contact Me</h2>
+                    <form><b>
+                        <label for="Contact Name">Contact Name:</label>
+                        <input type="text" id="Contact Name" name="Contact Name" style="margin-left: 4.1%; width: 10cm;"><br><br>
+                        <label for="Company Name">Company Name:</label>
+                        <input type="text" id="Company Name" name="Company Name" style="margin-left: 3%; width: 10cm;"><br><br>
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required style="margin-left: 11%; width: 10cm;"><br><br>
+                        <label for="Phone">Phone Number:</label>
+                        <input type="tel" id="Phone" name="Phone" pattern="[0-9]{9,10}" required required style="margin-left: 3.5%; width: 10cm;"><br><br>
+                        <label for="Location">Location:</label></b>
+                        <input type="checkbox" id="Location1" name="Location1" value="Central Israel" style="margin-left: 4.6%;">
+                        <label for="vehicle1"> Central Israel</label>
+                        <input type="checkbox" id="Location2" name="Location2" value="North Israel" style="margin-left: 11.9%;">
+                        <label for="vehicle2"> North Israel</label>
+                        <input type="checkbox" id="Location3" name="Location3" value="South Israel" style="margin-left: 12%;">
+                        <label for="vehicle3"> South Israel</label><br>
+                        <input type="checkbox" id="Location4" name="Location4" value="Working From Home" style="margin-left: 12%;">
+                        <label for="vehicle4"> Working From Home</label>
+                        <input type="checkbox" id="Location5" name="Location5" value="Relocation" style="margin-left: 6.3%;">
+                        <label for="vehicle5"> Relocation</label><br><br><b>
+                        <label for="Start Date">Expected Start Date:</label>
+                        <input type="date" id="Start Date" name="Start Date" style="margin-left: 1%;"><br><br>
+                        <label for="Information">Information and Requirements:</label><br><br>
+                        <textarea id="Information" name="Information" cols="50" rows="4"></textarea><br><br><br>
+                        <label for="submit"></label>
+                        <input type="image" value="submit" src="{{ url_for('static', filename='Submit.png') }}" alt="submit Button" onMouseOver="this.src='Submit.png'" width="200"><br><br></b>
+                    </form>
+                </div>
+            </section>
+            <!-- Page containing a copy of my resume for downloading -->
+            <section class="resume-section" id="Resume">
+                <div style="width: 100%">
+                    <h2 style="margin-bottom: 2rem">Resume For Download</h2>
+                    <a href="{{ url_for('static', filename='Eng Resume - Avishai Katz.pdf') }}" download>
+                        <img src="{{ url_for('static', filename='Resume.png') }}" alt="Avish" width="150">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

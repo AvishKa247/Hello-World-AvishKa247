@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pics</title>
+</head>
+<body>
+    {% block Main_Pics %}
+        <div class="row" >
+              <div class="column" style="float: left; width: 25%; padding: 5px">
+                <img src="{{ url_for('static', filename='The_Jinx.jpg') }}" style="width:100%">
+              </div>
+              <div class="column" style="float: left; width: 25%; padding: 5px">
+                <img src="{{ url_for('static', filename='The_Matrix_Poster.jpg') }}" style="width:100%">
+              </div>
+              <div class="column" style="float: left; width: 25%; padding: 5px">
+                <img src="{{ url_for('static', filename='The_Big_Lebowski.jpg') }}" style="width:100%">
+              </div>
+              <div class="column" style="float: left; width: 25%; padding: 5px">
+                <img src="{{ url_for('static', filename='Mean_Girls.png') }}" style="width:100%">
+              </div>
+        </div>
+    {% endblock %}
+
+</body>
+</html>
