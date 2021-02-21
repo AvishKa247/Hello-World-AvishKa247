@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Assignment 9 - Forms  </title>
+    <style>
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        div {text-align: center;}
+</style>
+</head>
+<body style="background-color: #4296EB;">
+    {% if session.get('logged_in') %}
+        <div class="LogOut">
+            <h2>Hello {{ session.get('username') }}!</h2>
+            <form action="/log_out" method="GET">
+                <button type="submit" style="text-align: center;">Log Out</button>
+            </form>
+        </div>
+    {% else %}
+        <h2>Welcome!</h2>
+        <div class="registration">
+            <h2>Registration Form:</h2><br>
+            <form action="/assignment9" method="POST">
+                <label for="FullName">Full Name:</label>
+                <input name="FullName" type="text"><br><br>
+                <label for="username">Password: </label>
+                <input name="password" type="password"><br><br>
+                <input type="submit">
+            </form>
+        </div>
+    {% endif %}
+    <br> <br> <br>
+    <!-- search form -->
+    <div class="search">
+        <h2>Search Form:</h2>
+        <form action="/assignment9" method="GET">
+            <label for="search">Search:</label>
+            <input type="text" name="SearchField"><br><br>
+            <input type="submit">
+        </form>
+         <div>
+            {% if search %}
+                <h2>Search Result:</h2>
+                {% for user in users %}
+                    {% if user.fullname == search or user.email == search  %}
+                        <h3>{{ user.fullname }}, {{ user.email }}</h3>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% if search =='' %}
+                <h2>Search Result:</h2>
+                {% for i in users %}
+                    <h3>{{ i.fullname }}, {{ i.email }}</h3>
+                {% endfor %}
+            {% endif %}
+         </div>
+    </div>
+</body>
+</html>
