@@ -1,0 +1,295 @@
+
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Designing repetitive parts of the HTML file */ 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #98D9CF;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: #9CF0CB;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  color: #343a40;
+}
+
+h1, .h1 {
+  font-size: 6rem;
+  line-height: 1;
+  font-family:"Saira Extra Condensed" ;
+}
+
+h2, .h2 {
+  font-size: 3.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.8rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+/*  Format the file navigation menu */ 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.bg-primary {
+  background-color: #3477BA;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+/* Location of the blue-painted years info parallel to the text  */ 
+.set-position{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  padding-top: 3.375rem;
+  color: #555b61;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
+}
+
+/* Secondary title design */ 
+.subheading {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/*  Format the file navigation menu */ 
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: #40576E;
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+  }
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+  #sideNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+}
+
+/*  Create a rounded design for social networking links */  
+
+.Icons {
+  display: inline-flex;
+  height: 5.8rem;
+  width: 5.8rem;
+  border-radius: 100%;
+  margin-right: 1rem;
+}
+.dev-icons {
+  font-size: 3rem;
+}
+
+/*  Designing the changing parts */   
+
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 75rem;
+}
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* From here on we will create an interactive image that pops up when we hover the link to the contact form to attract attention */
+
+#do_it::before {
+  content: '';
+  background-image: url(Do_It.jpg);
+  background-position: 0 30%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  left: 65em;
+  position: absolute;
+  bottom: 0vh;
+  width: 100vw;
+  transform: translateY(100%);
+  transition: transform .3s;
+}
+
+#do_it:hover::before {
+  transform: translateY(0px);
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    grid-template-columns: 250px 2fr .5em;
+  }
+  
+    #do_it::before {
+    background-position: 0;
+    background-size: 250px;
+    height: 200px;
+    transform: translateY(200px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    grid-template-columns: 350px 2fr 15px;
+  }
+  
+    #do_it::before {
+    background-size: 300px;
+    height: 250px;
+    transform: translateY(250px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
